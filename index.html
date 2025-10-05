@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* BASIC RESETS AND TYPOGRAPHY */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+        a { color: #0566c7; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* HEADER AND NAV */
+        .site--header {
+            background: #fff;
+            border-bottom: 1px solid #eaeaea;
+        }
+        header{
+            position: sticky;
+            top: 0;
+        }
+        .main--nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 18px 24px;
+        }
+       
+        .site--logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav--links {
+            display: flex;
+            gap: 22px;
+        }
+        .nav--links li { list-style: none; }
+
+        /* HERO SECTION */
+        .hero--section {
+            background: #eaf5ff;
+            text-align: center;
+            padding: 60px 10px 40px 10px;
+        }
+        .hero--section h1 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 13px;
+        }
+        .hero--subtitle {
+            font-size: 1.09rem;
+            margin-bottom: 20px;
+        }
+        .vmw--button {
+            background: #0566c7;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 32px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.18s;
+        }
+        .vmw--button:hover { background: #024c91; }
+
+        /* SECTION COMMONS */
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 7px;
+            padding: 36px 28px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.047);
+        }
+        h2 {
+            font-size: 1.35rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* ABOUT SECTION */
+        .about--flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+        .about--text { flex: 2; }
+        .about--skills { flex: 1; }
+        .about--skills h3 {
+            font-size: 1.08rem;
+            margin-bottom: 12px;
+        }
+        .about--skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .about--skills li {
+            font-size: .96rem;
+            background: #eaf5ff;
+            color: #0566c7;
+            border-radius: 17px;
+            padding: 5px 12px;
+            font-weight: 600;
+        }
+
+        /* PROJECTS SECTION */
+        .projects--grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .project--card {
+            background: #fafcff;
+            border-radius: 7px;
+            border: 1px solid #eaeaea;
+            flex: 1;
+            min-width: 220px;
+            padding: 18px 14px;
+        }
+        .project--card h3 {
+            font-size: 1.09rem;
+            margin-bottom: 8px;
+        }
+        .project--link { font-size: .97rem; color: #0566c7;}
+        .project--link:hover { text-decoration: underline; }
+
+        /* CONTACT SECTION */
+        .contact--section { text-align: center; }
+        .contact--info {
+            margin-top: 18px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .contact--info a {
+            font-size: 1.03rem;
+        }
+
+        /* FOOTER */
+        .site--footer {
+            background: #222;
+            color: #eaeaea;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 650px) {
+            section, .main--nav {
+                padding: 19px 7px;
+            }
+            .about--flex, .projects--grid, .contact--info {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+            .site--header { padding: 8px 0;}
+        }
+    </style>
+</head>
+<body>
+    <header class="site--header">
+        <nav class="main--nav">
+            <div class="site--logo">Sohit Kumar Nagar</div>
+            <ul class="nav--links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero--section">
+            <h1>Computer Science Grad</h1>
+            <p class="hero--subtitle">Passionate about web and game development.</p>
+            <a href="#" class="vmw--button">View My Work</a>
+        </section>
+
+        <section id="about" class="about--section">
+            <div class="about--flex">
+                <div class="about--text">
+                    <h2>About Me</h2>
+                    <p>
+                        Hello! I'm a student developer with a strong interest in technology. I enjoy building things for the web and learning about game design principles. My goal is to use my skills to create useful and enjoyable digital experiences.
+                    </p>
+                </div>
+                <div class="about--skills">
+                    <h3>Core Skills</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Flexbox Layout</li>
+                        <li>Java</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects--section">
+            <h2>My Projects</h2>
+            <div class="projects--grid">
+                <div class="project--card">
+                    <h3>Personal Website V1</h3>
+                    <p>My first portfolio website built using fundamental HTML and CSS to practice web layout concepts.</p>
+                    <a href="#" class="project--link">View on GitHub</a>
+                </div>
+                <div class="project--card">
+                    <h3>Text-Based Adventure Game</h3>
+                    <p>A simple adventure game created with Java, focusing on object-oriented programming and logic.</p>
+                    <a href="#" class="project--link">View on GitHub</a>
+                </div>
+                <div class="project--card">
+                    <h3>CSS Flexbox Gallery</h3>
+                    <p>An image gallery project specifically designed to master responsive layouts using CSS Flexbox.</p>
+                    <a href="https://github.com/Sohit007-SST/sohit10801/blob/main/Assignments/dog-gallery.html" class="project--link">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact--section">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out through email or connect with me on social platforms.</p>
+            <div class="contact--info">
+                <a href="mailto:sohitnagar007@gmail.com">G.Mail</a>
+                <a href="https://www.linkedin.com/in/sohit-nagar-47ab2a379/">LinkedIn</a>
+                <a href="https://github.com/Sohit007-SST/sohit10801">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site--footer">
+        <p>&copy; 2025 Sohit Kumar Nagar</p>
+    </footer>
+</body>
+</html>
